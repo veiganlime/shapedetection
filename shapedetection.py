@@ -1,6 +1,7 @@
 import cv2
 
-
+def get_contours(image):
+    pass
 
 image = cv2.imread("source/shapes_v2.png")
 imageContour = image.copy()
