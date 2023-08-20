@@ -16,10 +16,12 @@ def get_contours(image):
 
         if objCorner == 3:
             objectType = 'Dreieck'
-
         elif objCorner == 4:
-            objectType = 'Rechteck'
-
+            aspectRatio = float(w)/float(h)
+            if aspectRatio > 0.95 and aspectRatio < 1.05:
+                objectType = 'Quadrat'
+            else:
+                objectType = "Recheck"
         elif objCorner > 4:
             objectType = 'Creis'
 
